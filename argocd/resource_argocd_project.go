@@ -104,7 +104,7 @@ func resourceArgoCDProjectCreate(ctx context.Context, d *schema.ResourceData, me
 		},
 		// TODO: allow upsert instead of always requiring resource import?
 		// TODO: make that a resource flag with proper acceptance tests
-		Upsert: false,
+		Upsert: true,
 	})
 	tokenMutexProjectMap[projectName].Unlock()
 

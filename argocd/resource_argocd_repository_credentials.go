@@ -44,7 +44,7 @@ func resourceArgoCDRepositoryCredentialsCreate(ctx context.Context, d *schema.Re
 		ctx,
 		&repocreds.RepoCredsCreateRequest{
 			Creds:  repoCreds,
-			Upsert: false,
+			Upsert: true,
 		},
 	)
 	tokenMutexConfiguration.Unlock()
