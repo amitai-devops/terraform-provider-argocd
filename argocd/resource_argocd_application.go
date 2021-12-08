@@ -139,6 +139,7 @@ func resourceArgoCDApplicationCreate(ctx context.Context, d *schema.ResourceData
 
 			ObjectMeta: objectMeta,
 			Spec:       spec,
+			Upsert: true,
 			TypeMeta: metav1.TypeMeta{
 				Kind:       "Application",
 				APIVersion: "argoproj.io/v1alpha1",
